@@ -1,0 +1,108 @@
+body > .calendar-container {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    background-color: $raisin-black;
+    margin: 50px auto;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 70vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 60vw;
+    }
+
+    .calendar-title {
+        text-align: center;
+        padding: 30px 0;
+        color: $raisin-black;
+        font-weight: 100;
+        font-size: 2.5em;
+        background-color: $flickr-pink;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin: 0 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+    }
+
+    .calendar-info {
+        padding: 20px 0;
+        height: calc(100% - 100px);
+        text-align: center;
+
+        .calendar-header {
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            h3 {
+                font-size: 2em;
+                font-weight: 100;
+                color: $flickr-pink;
+                margin: 0 20px;
+                padding: 0 10px;
+                width: 30%;
+            }
+
+            svg {
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+                border-radius: 5px;
+                fill: $flickr-pink;
+                box-shadow: 0px 5px 10px $space-cadet;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover {
+                    box-shadow: 0px 5px 0px $raisin-black;
+                }
+
+                &:active {
+                    scale: .95;
+                }
+            }
+        }
+
+    }
+
+    .calendar-content {
+        position: relative;
+        margin: 30px auto 0 auto;
+        width: 80%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: repeat(7, calc(100% / 7));
+        grid-template-rows: repeat(5, calc(90% / 5));
+        gap: 5px;
+
+        div {
+            background-color: $space-cadet;
+            color: $flickr-pink;
+            font-size: 1.5em;
+            text-align: right;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all .4s ease;
+
+            &:hover {
+                scale: 2.5;
+                border-radius: 20px;
+                background-color: rgb(46, 47, 69);
+            }
+        }
+    }
+
+}

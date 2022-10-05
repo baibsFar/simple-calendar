@@ -1,0 +1,9 @@
+@import './partials/variables';
+@import './partials/reset';
+@import './partials/calendar';
+
+body {
+    background-color: $space-cadet;
+    min-width: 100vw;
+    min-height: 100vh;
+}

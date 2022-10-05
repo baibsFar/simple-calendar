@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body > .calendar-container {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background-color: #242537;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body > .calendar-container {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body > .calendar-container {
+    width: 60vw;
+  }
+}
+body > .calendar-container .calendar-title {
+  text-align: center;
+  padding: 30px 0;
+  color: #242537;
+  font-weight: 100;
+  font-size: 2.5em;
+  background-color: #ed3583;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .calendar-container .calendar-title svg {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+}
+body > .calendar-container .calendar-info {
+  padding: 20px 0;
+  height: calc(100% - 100px);
+  text-align: center;
+}
+body > .calendar-container .calendar-info .calendar-header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body > .calendar-container .calendar-info .calendar-header h3 {
+  font-size: 2em;
+  font-weight: 100;
+  color: #ed3583;
+  margin: 0 20px;
+  padding: 0 10px;
+  width: 30%;
+}
+body > .calendar-container .calendar-info .calendar-header svg {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  fill: #ed3583;
+  box-shadow: 0px 5px 10px #1c1c32;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body > .calendar-container .calendar-info .calendar-header svg:hover {
+  box-shadow: 0px 5px 0px #242537;
+}
+body > .calendar-container .calendar-info .calendar-header svg:active {
+  scale: 0.95;
+}
+body > .calendar-container .calendar-content {
+  position: relative;
+  margin: 30px auto 0 auto;
+  width: 80%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(7, 14.2857142857%);
+  grid-template-rows: repeat(5, 18%);
+  gap: 5px;
+}
+body > .calendar-container .calendar-content div {
+  background-color: #1c1c32;
+  color: #ed3583;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+body > .calendar-container .calendar-content div:hover {
+  scale: 2.5;
+  border-radius: 20px;
+  background-color: rgb(46, 47, 69);
+}
+
+body {
+  background-color: #1c1c32;
+  min-width: 100vw;
+  min-height: 100vh;
+}/*# sourceMappingURL=main.css.map */
