@@ -34,6 +34,7 @@ export function fillCalendar(year, month, container) {
 /**
  * Previous button that updates displayed month
  * @param {HTMLElement} container 
+ * @param {HTMLElement} contentContainer
  */
 export function previousMonthHandler (container, contentContainer) {
     if (actualDate.month === 0)
@@ -47,6 +48,7 @@ export function previousMonthHandler (container, contentContainer) {
 /**
  * Next button that updates displayed month
  * @param {HTMLElement} container 
+ * @param {HTMLElement} contentContainer
  */
 export function nextMonthHandler (container, contentContainer) {
     if (actualDate.month === months.length - 1)
@@ -54,5 +56,29 @@ export function nextMonthHandler (container, contentContainer) {
     else actualDate.month++
     contentContainer.innerHTML = ''
     container.innerHTML = `${months[actualDate.month]}`
+    fillCalendar(actualDate.year, actualDate.month, contentContainer)
+}
+
+/**
+ * Previuos button that updates displayed year
+ * @param {HTMLElement} container 
+ * @param {HTMLElement} contentContainer 
+ */
+export function previousYearHandler (container, contentContainer) {
+    actualDate.year--
+    contentContainer.innerHTML = ''
+    container.innerHTML = `${actualDate.year}`
+    fillCalendar(actualDate.year, actualDate.month, contentContainer)
+}
+
+/**
+ * Next button that updates displayed year
+ * @param {HTMLElement} container 
+ * @param {HTMLElement} contentContainer 
+ */
+export function nextYearHandler (container, contentContainer) {
+    actualDate.year++
+    contentContainer.innerHTML = ''
+    container.innerHTML = `${actualDate.year}`
     fillCalendar(actualDate.year, actualDate.month, contentContainer)
 }

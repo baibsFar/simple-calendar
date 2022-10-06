@@ -3,7 +3,9 @@ import {
     nextMonthHandler, 
     previousMonthHandler,
     months,
-    actualDate 
+    actualDate, 
+    previousYearHandler,
+    nextYearHandler
 } from './utils.js'
 
 
@@ -15,8 +17,10 @@ calendarTitle.innerHTML = `
 `
 
 /* Calendar header with the current month that can be changed */
-const calendarHeader = document.querySelector('.calendar-header > h3')
-calendarHeader.innerHTML = `${months[actualDate.month]}`
+const headerMonth = document.querySelector('.header-month > h3')
+const headerYear = document.querySelector('.header-year > h3')
+headerMonth.innerHTML = `${months[actualDate.month]}`
+headerYear.innerHTML = `${actualDate.year}`
 
 const calendarContent = document.querySelector('.calendar-content')
 fillCalendar(actualDate.year, actualDate.month, calendarContent)
@@ -25,6 +29,13 @@ fillCalendar(actualDate.year, actualDate.month, calendarContent)
 const prevMonth = document.querySelector('.previous-month')
 const nextMonth = document.querySelector('.next-month')
 
-prevMonth.addEventListener('click', () => previousMonthHandler(calendarHeader,calendarContent))
+prevMonth.addEventListener('click', () => previousMonthHandler(headerMonth,calendarContent))
+nextMonth.addEventListener('click', () => nextMonthHandler(headerMonth,calendarContent))
 
-nextMonth.addEventListener('click', () => nextMonthHandler(calendarHeader,calendarContent))
+
+/* Previous and Next button handler for the year change */
+const prevYear = document.querySelector('.previous-year')
+const nextYear = document.querySelector('.next-year')
+
+prevYear.addEventListener('click', () => previousYearHandler(headerYear, calendarContent))
+nextYear.addEventListener('click', () => nextYearHandler(headerYear, calendarContent))
