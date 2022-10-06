@@ -1,0 +1,16 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "A Simple Calendar implementation with VanillaJS",
+  "main": "index.js",
+  "repository": "https://github.com/baibsFar/simple-calendar.git",
+  "author": "baibsFar <fararano.kevin@gmail.com>",
+  "scripts": {
+    "build-css": "sass ./src/scss/main.scss ./src/css/main.css"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
