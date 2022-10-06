@@ -23,9 +23,10 @@ export const getDays = (year, month) => new Date(year, month, 0).getDate()
  * @param {HTMLElement} container 
  */
 export function fillCalendar(year, month, container) {
-    for (let i = 0; i < getDays(year, month); i++) {
+    for (let i = 0; i < getDays(year, month + 1); i++) {
         const div = document.createElement('div')
-        div.innerHTML = `${i + 1}`
+        const day = days[new Date(year, month, i + 1).getDay()]
+        div.innerHTML = `${day[0]}${day[1]}${day[2]} . ${i + 1}`
         container.appendChild(div)
     }
 }

@@ -84,8 +84,8 @@ body > .calendar-container {
         width: 80%;
         height: 90%;
         display: grid;
-        grid-template-columns: repeat(7, calc(100% / 7));
-        grid-template-rows: repeat(5, calc(90% / 5));
+        grid-template-columns: repeat(6, calc(100% / 6));
+        grid-template-rows: repeat(6, calc(90% / 6));
         gap: 5px;
 
         div {
